@@ -48,3 +48,107 @@
 // obj2bind(11,22,33)
 
 
+// !------------------------------------------
+
+
+// const arr = [1,2,3,4,5]
+
+// Array.prototype.zumrud="Salam"
+// console.log(arr.zumrud);
+
+
+
+
+// class Animal {
+//     constructor(name, year) {
+//         this.name = name;
+//         this.year = year;
+//         this.getInfo = function () {
+//             return this.name + " " + this.year;
+//         };
+//     }
+// }
+
+
+// class Dog extends Animal{
+//     constructor(name,year,color){
+//         super(name,year)
+//         this.color=color
+//     }
+//     getInfo(){
+//         return this.name + " " + this.year + " " + this.color
+//     }
+// }
+// const cat = new Animal("Garfield",4)
+
+// const dog=new Animal("Alfa",2,"black")
+
+// console.log(cat.getInfo());
+// console.log(dog.getInfo());
+
+
+// ? task 1
+
+// class CustomMatch{
+//     constructor(number){
+//         this.value=number
+//     }
+//     plus(num){
+//         this.value+=num
+//         return this;
+//     }
+//     minus(num){
+//         this.value-=num
+//         return this;          
+//     }
+//     multiply(num){
+//         this.value*=num
+//         return this;         
+//     }
+//     divide(num){
+//         this.value/=num
+//         return this;          
+//     }    
+// }
+
+// var result = new CustomMatch(50).plus(6).minus(30).multiply(3).divide(2)
+
+// console.log(result);
+
+
+
+// ? task 2
+
+// class Endirim{
+//     constructor(kitab,yazici,il,qiymet){
+//         this.kitab=kitab
+//         this.yazici=yazici
+//         this.il=il
+//         this.qiymet=qiymet
+
+//     }
+//     endirim(price){
+//         this.price=this.qiymet-(this.qiymet*price)/100;
+//         return this;
+//     }
+    
+// }
+
+// const book = new Endirim("Tutunamayanloar","Oguz Atay","1972",50)
+
+// console.log(book.endirim(20));
+
+
+// ? task 3
+
+const arr=[1,2,3,4,5]
+
+function hesab(arr,cb) {
+    const narr =[]
+    for (let i = 0; i < arr.length; i++) {
+        narr.push(cb(arr[i]))
+    }
+    return narr
+}
+const temp = hesab(arr,(x)=>x*2)
+console.log(temp);
